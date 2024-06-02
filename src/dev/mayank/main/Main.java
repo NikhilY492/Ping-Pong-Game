@@ -19,7 +19,6 @@ public class Main {
 			// Declaration of object of JButton class. 
 		     JButton b1; 
 		     JButton b2;
-		     JButton b3;
 		       
 		     // Constructor of Play class 
 		     Play() 
@@ -30,25 +29,21 @@ public class Main {
 		         // Initialization of object of "JButton" class. 
 		         b1 = new JButton("Play Game!"); 
 		         b2 = new JButton("Exit");
-		         b3 = new JButton("Blog");
 		         
 		           
 		         // Setting Bounds of a JButton. 
 		         b1.setBounds(150, 50, 100, 50); 
 		         b2.setBounds(150, 100, 100, 50); 
-		         b3.setBounds(150,150,100,50);
 		         
 		           
 		         //"this" keyword in java refers to current object. 
 		         // Adding JButton on JFrame. 
 		         this.add(b1); 
 		         this.add(b2);
-		         this.add(b3);
 		           
 		         // Adding Listener toJButton. 
 		         b1.addActionListener(this); 
 		         b2.addActionListener(this);
-		         b3.addActionListener(this);
 		     } 
 		   
 		     // Override Method 
@@ -62,15 +57,7 @@ public class Main {
 		         { 
 		          System.exit(0);
 		         } 
-		         if (evt.getSource() == b3)  
-		         { 
-		        	 try {
-						java.awt.Desktop.getDesktop().browse(java.net.URI.create("https://mayankchoudhary.home.blog/"));
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-		         } 
+		         
 		     } 
 		 } 
 		        
